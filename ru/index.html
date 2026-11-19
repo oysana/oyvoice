@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OyVoice — диктовка для Pop!_OS COSMIC</title>
+<meta name="description" content="Диктовка в любое приложение Linux, не выходя из него. Ctrl+Alt+Space запускает речь провайдера на скрытом дисплее, текст встаёт туда, где был курсор. Pop!_OS 24.04 COSMIC.">
+<link rel="alternate" hreflang="en" href="/">
+<link rel="alternate" hreflang="ru" href="/ru/">
+<meta property="og:title" content="OyVoice — диктовка для Pop!_OS COSMIC">
+<meta property="og:description" content="Ctrl+Alt+Space, сказали, ещё раз — текст в поле, где вы уже печатали. Окно провайдера на рабочем столе не появляется.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "OyVoice",
+  "operatingSystem": "Pop!_OS 24.04 COSMIC (Wayland, x86_64)",
+  "applicationCategory": "UtilitiesApplication",
+  "offers": {"@type": "Offer", "price": "1.00", "priceCurrency": "USD",
+             "description": "Ранний доступ: загрузка сборки .deb, лицензионный ключ, прямая связь с автором"}
+}
+</script>
+<style>
+  body{font-family:system-ui,sans-serif;max-width:640px;margin:2rem auto;
+       padding:0 1.2rem;line-height:1.6;color:#141414}
+  h1{font-size:1.9rem;line-height:1.25;margin-bottom:.4rem}
+  h2{font-size:1.15rem;margin-top:2.2rem}
+  .sub{font-size:1.1rem;color:#333}
+  .limits{background:#fff7ed;border:1px solid #f59e0b;border-radius:8px;
+          padding:.9rem 1.1rem}
+  .cta{display:inline-block;margin-top:1.2rem;padding:.8rem 1.8rem;
+       background:#111;color:#fff;text-decoration:none;border-radius:8px;
+       font-size:1.05rem}
+  .cta2{margin-left:1rem;color:#333}
+  footer{margin-top:3rem;color:#666;font-size:.85rem;
+         border-top:1px solid #ddd;padding-top:1rem}
+  code{background:#f1f1f1;padding:.1rem .35rem;border-radius:4px}
+  ol.plain{padding-left:1.2rem}
+</style>
+</head>
+<body>
+<h1>OyVoice — диктовка для Pop!_OS COSMIC</h1>
+<p class="sub">Нажали <code>Ctrl+Alt+Space</code>, сказали, нажали ещё раз —
+текст в том поле, где вы уже печатали. Окно провайдера на рабочем столе не
+появляется.</p>
+
+<h2>Как это работает</h2>
+<ol class="plain">
+<li>Горячая клавиша запускает диктовку самого провайдера — не модель на вашей
+машине.</li>
+<li>Провайдер живёт на отдельном скрытом дисплее: не получает фокус, не
+показывается.</li>
+<li>Распознанный текст вводится в окно, которое было в фокусе, — или
+возвращается вам, если доставка не подтверждена.</li>
+</ol>
+
+<h2>За что вы не платите</h2>
+<p>Не нужен GPU. Не нужен API-ключ. Нет подписки нам. Распознаёт провайдер —
+его собственной бесплатной диктовкой; OyVoice владеет только «мостом».</p>
+
+<h2>Ограничения — прочтите до покупки</h2>
+<div class="limits"><ul>
+<li>Только Pop!_OS 24.04 COSMIC. Wayland, x86_64, Google Chrome из
+<code>.deb</code>. Ничего другого сегодня не поддерживается.</li>
+<li>Провайдер Google — экспериментальный. Качество живой речи RU/EN физическими
+тестами ещё не подтверждено.</li>
+<li>Сборка не прошла производственную квалификацию: физические ворота приёмки
+открыты.</li>
+<li>Аудио уходит выбранному облачному провайдеру. Перед диктовкой личного
+прочитайте уведомление о приватности.</li>
+<li>Вставка в приложения с неизвестным фокусом отклоняется по замыслу;
+неподтверждённая доставка показывается, но не повторяется автоматически.</li>
+</ul></div>
+
+<h2>Чем это не является</h2>
+<p>Не локальная модель. Не транскрибация встреч. Не macOS и не Windows. Не
+сервис, который хранит ваше аудио у нас.</p>
+
+<h2>Ранний доступ — продажи ещё не открыты</h2>
+<p>Стартовое предложение будет <strong>$1</strong>: текущая сборка
+<code>.deb</code>, лицензионный ключ и прямая связь с автором. Ссылка на
+оформление появится на этой странице, когда продажи откроются, — сегодня
+платить не за что.</p>
+
+<h2>Вопросы</h2>
+<p><strong>Нужен GPU или ключ OpenAI?</strong><br>
+Нет. Распознавание идёт в диктовке самого провайдера, куда вы один раз
+входите.</p>
+<p><strong>Какие системы подходят?</strong><br>
+Pop!_OS 24.04 с COSMIC на Wayland, x86_64, Chrome из <code>.deb</code>. Всё
+остальное честно не поддерживается.</p>
+<p><strong>Что с приватностью?</strong><br>
+Аудио уходит выбранному облачному провайдеру. OyVoice хранит ограниченную
+локальную историю транскриптов, её можно удалить. Что именно хранится — в
+уведомлении о приватности.</p>
+<p><strong>Что будет, если текст не вставился?</strong><br>
+OyVoice сообщит о неподтверждённой доставке и оставит транскрипт для ручного
+восстановления. Молча повторять он не будет.</p>
+<p><strong>Сколько это будет стоить?</strong><br>
+Стартовое предложение планируется за $1 — упакованная сборка, лицензионный
+ключ и прямая связь с автором. Продажи ещё не открыты.</p>
+<p><strong>Можно будет вернуть деньги?</strong><br>
+Условия возврата задаст платёжная платформа после открытия продаж; запросы
+будет разбирать автор лично.</p>
+
+<footer>
+OyVoice · связь: <a href="https://github.com/oysana/oyvoice/issues">GitHub
+Issues</a>
+</footer>
+</body>
+</html>

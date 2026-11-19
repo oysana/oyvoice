@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Canonical domain is set at deploy time; replace oysana.github.io/oyvoice in both URLs. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://oysana.github.io/oyvoice/</loc><changefreq>weekly</changefreq></url>
+  <url><loc>https://oysana.github.io/oyvoice/ru/</loc><changefreq>weekly</changefreq></url>
+</urlset>
