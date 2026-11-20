@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OyVoice — диктовка для Pop!_OS COSMIC</title>
-<meta name="description" content="Диктовка в любое приложение Linux, не выходя из него. Ctrl+Alt+Space запускает речь провайдера на скрытом дисплее, текст встаёт туда, где был курсор. Pop!_OS 24.04 COSMIC.">
-<link rel="alternate" hreflang="en" href="/">
-<link rel="alternate" hreflang="ru" href="/ru/">
+<meta name="description" content="Диктовка для Pop!_OS 24.04 COSMIC. Ctrl+Alt+Space запускает диктовку через облачного провайдера и возвращает текст в поле ввода.">
+<link rel="alternate" hreflang="en" href="https://oysana.github.io/oyvoice/">
+<link rel="alternate" hreflang="ru" href="https://oysana.github.io/oyvoice/ru/">
 <meta property="og:title" content="OyVoice — диктовка для Pop!_OS COSMIC">
-<meta property="og:description" content="Ctrl+Alt+Space, сказали, ещё раз — текст в поле, где вы уже печатали. Окно провайдера на рабочем столе не появляется.">
+<meta property="og:description" content="Диктовка для Pop!_OS 24.04 COSMIC. Ctrl+Alt+Space запускает диктовку через облачного провайдера и возвращает текст в поле ввода.">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
 {
@@ -16,97 +16,97 @@
   "@type": "SoftwareApplication",
   "name": "OyVoice",
   "operatingSystem": "Pop!_OS 24.04 COSMIC (Wayland, x86_64)",
-  "applicationCategory": "UtilitiesApplication",
-  "offers": {"@type": "Offer", "price": "1.00", "priceCurrency": "USD",
-             "description": "Ранний доступ: загрузка сборки .deb, лицензионный ключ, прямая связь с автором"}
+  "applicationCategory": "UtilitiesApplication"
 }
 </script>
 <style>
-  body{font-family:system-ui,sans-serif;max-width:640px;margin:2rem auto;
-       padding:0 1.2rem;line-height:1.6;color:#141414}
+  body{font-family:system-ui,sans-serif;margin:0;line-height:1.6;color:#141414}
+  .oy-hero{max-width:640px;margin:2rem auto;padding:0 1.2rem}
   h1{font-size:1.9rem;line-height:1.25;margin-bottom:.4rem}
-  h2{font-size:1.15rem;margin-top:2.2rem}
   .sub{font-size:1.1rem;color:#333}
-  .limits{background:#fff7ed;border:1px solid #f59e0b;border-radius:8px;
-          padding:.9rem 1.1rem}
-  .cta{display:inline-block;margin-top:1.2rem;padding:.8rem 1.8rem;
-       background:#111;color:#fff;text-decoration:none;border-radius:8px;
-       font-size:1.05rem}
-  .cta2{margin-left:1rem;color:#333}
-  footer{margin-top:3rem;color:#666;font-size:.85rem;
-         border-top:1px solid #ddd;padding-top:1rem}
   code{background:#f1f1f1;padding:.1rem .35rem;border-radius:4px}
-  ol.plain{padding-left:1.2rem}
 </style>
+<link rel="stylesheet" href="../assets/storefront.css">
+<script type="module" src="../assets/storefront-shader.js"></script>
 </head>
 <body>
+<main>
+<header class="oy-hero">
 <h1>OyVoice — диктовка для Pop!_OS COSMIC</h1>
 <p class="sub">Нажали <code>Ctrl+Alt+Space</code>, сказали, нажали ещё раз —
 текст в том поле, где вы уже печатали. Окно провайдера на рабочем столе не
 появляется.</p>
+</header>
 
-<h2>Как это работает</h2>
-<ol class="plain">
-<li>Горячая клавиша запускает диктовку самого провайдера — не модель на вашей
-машине.</li>
-<li>Провайдер живёт на отдельном скрытом дисплее: не получает фокус, не
-показывается.</li>
-<li>Распознанный текст вводится в окно, которое было в фокусе, — или
-возвращается вам, если доставка не подтверждена.</li>
-</ol>
+<div class="oy-story">
+  <section data-design-section="bento" aria-labelledby="how-title">
+    <header class="oy-section-head">
+      <h2 id="how-title" class="oy-title">От голоса к тексту.</h2>
+      <p>Три шага в том же окне, где вы печатаете.</p>
+    </header>
+    <div class="oy-grid">
+      <article class="oy-tile oy-tile--stage">
+        <picture class="oy-stage-art" data-design-visual>
+          <source media="(max-width: 740px)" srcset="../assets/voice-wave-small.webp">
+          <img src="../assets/voice-wave.webp" width="1280" height="853" alt="">
+        </picture>
+        <div class="oy-tile-copy">
+          <span class="oy-keys"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Space</kbd></span>
+          <h3>Скажите и нажмите ещё раз.</h3>
+          <p>Сочетание клавиш запускает и останавливает диктовку.</p>
+        </div>
+      </article>
+      <article class="oy-tile oy-tile--diagram">
+        <div class="oy-tile-copy">
+          <h3>Окно остаётся на месте.</h3>
+          <p>Провайдер распознаёт речь на отдельном скрытом дисплее.</p>
+        </div>
+        <img class="oy-diagram" data-design-visual src="../assets/private-display.svg" width="360" height="120" alt="">
+      </article>
+      <article class="oy-tile oy-tile--diagram oy-tile--cursor">
+        <div class="oy-tile-copy">
+          <h3>Текст у курсора.</h3>
+          <p>Если вставка не подтверждена, OyVoice оставляет текст для ручного восстановления.</p>
+        </div>
+        <img class="oy-diagram" data-design-visual src="../assets/cursor.svg" width="360" height="120" alt="">
+      </article>
+    </div>
+  </section>
 
-<h2>За что вы не платите</h2>
-<p>Не нужен GPU. Не нужен API-ключ. Нет подписки нам. Распознаёт провайдер —
-его собственной бесплатной диктовкой; OyVoice владеет только «мостом».</p>
+  <section class="oy-editorial" data-design-section="editorial" aria-labelledby="requirements-title">
+    <h2 id="requirements-title" class="oy-title">Перед первой пробой.</h2>
+    <dl class="oy-facts">
+      <div><dt>Система</dt><dd>Pop!_OS 24.04 COSMIC, Wayland, x86_64. Google Chrome из пакета .deb.</dd></div>
+      <div><dt>Готовность</dt><dd>Тестовая сборка. Проверки на реальном устройстве не завершены. Распознавание Google экспериментальное.</dd></div>
+      <div><dt>Приватность</dt><dd>Звук получает выбранный облачный провайдер. OyVoice хранит ограниченную локальную историю текста, её можно удалить.</dd></div>
+    </dl>
+  </section>
 
-<h2>Ограничения — прочтите до покупки</h2>
-<div class="limits"><ul>
-<li>Только Pop!_OS 24.04 COSMIC. Wayland, x86_64, Google Chrome из
-<code>.deb</code>. Ничего другого сегодня не поддерживается.</li>
-<li>Провайдер Google — экспериментальный. Качество живой речи RU/EN физическими
-тестами ещё не подтверждено.</li>
-<li>Сборка не прошла производственную квалификацию: физические ворота приёмки
-открыты.</li>
-<li>Аудио уходит выбранному облачному провайдеру. Перед диктовкой личного
-прочитайте уведомление о приватности.</li>
-<li>Вставка в приложения с неизвестным фокусом отклоняется по замыслу;
-неподтверждённая доставка показывается, но не повторяется автоматически.</li>
-</ul></div>
+  <section class="oy-action" data-design-section="action" aria-labelledby="status-title">
+    <div class="oy-action-copy">
+      <h2 id="status-title" class="oy-title" data-design-heading>Продажи ещё не открыты.</h2>
+      <p>OyVoice бесплатен для тестирования.</p>
+      <a class="oy-button" data-design-primary href="https://github.com/oysana/oyvoice/issues">
+        Открыть GitHub Issues
+        <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 14 6M6 6h8v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="oy-action-art" data-design-visual aria-hidden="true"><canvas width="512" height="256"></canvas></div>
+  </section>
 
-<h2>Чем это не является</h2>
-<p>Не локальная модель. Не транскрибация встреч. Не macOS и не Windows. Не
-сервис, который хранит ваше аудио у нас.</p>
-
-<h2>Ранний доступ — продажи ещё не открыты</h2>
-<p>Стартовое предложение будет <strong>$1</strong>: текущая сборка
-<code>.deb</code>, лицензионный ключ и прямая связь с автором. Ссылка на
-оформление появится на этой странице, когда продажи откроются, — сегодня
-платить не за что.</p>
-
-<h2>Вопросы</h2>
-<p><strong>Нужен GPU или ключ OpenAI?</strong><br>
-Нет. Распознавание идёт в диктовке самого провайдера, куда вы один раз
-входите.</p>
-<p><strong>Какие системы подходят?</strong><br>
-Pop!_OS 24.04 с COSMIC на Wayland, x86_64, Chrome из <code>.deb</code>. Всё
-остальное честно не поддерживается.</p>
-<p><strong>Что с приватностью?</strong><br>
-Аудио уходит выбранному облачному провайдеру. OyVoice хранит ограниченную
-локальную историю транскриптов, её можно удалить. Что именно хранится — в
-уведомлении о приватности.</p>
-<p><strong>Что будет, если текст не вставился?</strong><br>
-OyVoice сообщит о неподтверждённой доставке и оставит транскрипт для ручного
-восстановления. Молча повторять он не будет.</p>
-<p><strong>Сколько это будет стоить?</strong><br>
-Стартовое предложение планируется за $1 — упакованная сборка, лицензионный
-ключ и прямая связь с автором. Продажи ещё не открыты.</p>
-<p><strong>Можно будет вернуть деньги?</strong><br>
-Условия возврата задаст платёжная платформа после открытия продаж; запросы
-будет разбирать автор лично.</p>
-
-<footer>
-OyVoice · связь: <a href="https://github.com/oysana/oyvoice/issues">GitHub
-Issues</a>
-</footer>
+  <section class="oy-faq" data-design-section="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="oy-title">Частые вопросы.</h2>
+    <div class="oy-faq-list">
+      <details><summary>Нужен GPU или ключ API?</summary><p>Нет. Речь распознаёт выбранный облачный провайдер. Для провайдера ChatGPT нужен вход в аккаунт.</p></details>
+      <details><summary>Что будет, если OyVoice не определит фокус?</summary><p>OyVoice отклоняет вставку в неизвестное поле. Если вставка не подтверждена, он сообщит об этом и оставит текст для ручного восстановления.</p></details>
+      <details><summary>Проверяли распознавание Google на живой речи?</summary><p>Провайдер экспериментальный. Проверки живой русской и английской речи на реальном устройстве ещё впереди.</p></details>
+    </div>
+  </section>
+  <footer class="oy-footer" role="contentinfo">
+    <span>OyVoice</span>
+    <a href="../" hreflang="en" lang="en" aria-label="Открыть страницу на английском">English</a>
+  </footer>
+</div>
+</main>
 </body>
 </html>

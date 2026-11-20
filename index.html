@@ -4,11 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>OyVoice — dictation for Pop!_OS COSMIC</title>
-<meta name="description" content="Dictate into any Linux app without leaving it. Ctrl+Alt+Space starts provider speech on a private display; the text lands where your caret was. Pop!_OS 24.04 COSMIC.">
-<link rel="alternate" hreflang="ru" href="/ru/">
-<link rel="alternate" hreflang="en" href="/">
+<meta name="description" content="Dictation for Pop!_OS 24.04 COSMIC. Use Ctrl+Alt+Space to dictate through your selected cloud provider and return text to the focused field.">
+<link rel="alternate" hreflang="ru" href="https://oysana.github.io/oyvoice/ru/">
+<link rel="alternate" hreflang="en" href="https://oysana.github.io/oyvoice/">
 <meta property="og:title" content="OyVoice — dictation for Pop!_OS COSMIC">
-<meta property="og:description" content="Ctrl+Alt+Space, speak, press again — the text lands where your caret was. The provider's window never appears on your desktop.">
+<meta property="og:description" content="Dictation for Pop!_OS 24.04 COSMIC. Use Ctrl+Alt+Space to dictate through your selected cloud provider and return text to the focused field.">
 <meta property="og:type" content="website">
 <script type="application/ld+json">
 {
@@ -16,95 +16,97 @@
   "@type": "SoftwareApplication",
   "name": "OyVoice",
   "operatingSystem": "Pop!_OS 24.04 COSMIC (Wayland, x86_64)",
-  "applicationCategory": "UtilitiesApplication",
-  "offers": {"@type": "Offer", "price": "1.00", "priceCurrency": "USD",
-             "description": "Early access: .deb build download, license key, direct contact with the author"}
+  "applicationCategory": "UtilitiesApplication"
 }
 </script>
 <style>
-  body{font-family:system-ui,sans-serif;max-width:640px;margin:2rem auto;
-       padding:0 1.2rem;line-height:1.6;color:#141414}
+  body{font-family:system-ui,sans-serif;margin:0;line-height:1.6;color:#141414}
+  .oy-hero{max-width:640px;margin:2rem auto;padding:0 1.2rem}
   h1{font-size:1.9rem;line-height:1.25;margin-bottom:.4rem}
-  h2{font-size:1.15rem;margin-top:2.2rem}
   .sub{font-size:1.1rem;color:#333}
-  .limits{background:#fff7ed;border:1px solid #f59e0b;border-radius:8px;
-          padding:.9rem 1.1rem}
-  .cta{display:inline-block;margin-top:1.2rem;padding:.8rem 1.8rem;
-       background:#111;color:#fff;text-decoration:none;border-radius:8px;
-       font-size:1.05rem}
-  .cta2{margin-left:1rem;color:#333}
-  footer{margin-top:3rem;color:#666;font-size:.85rem;
-         border-top:1px solid #ddd;padding-top:1rem}
   code{background:#f1f1f1;padding:.1rem .35rem;border-radius:4px}
-  ol.plain{padding-left:1.2rem}
 </style>
+<link rel="stylesheet" href="./assets/storefront.css">
+<script type="module" src="./assets/storefront-shader.js"></script>
 </head>
 <body>
+<main>
+<header class="oy-hero">
 <h1>OyVoice — dictation for Pop!_OS COSMIC</h1>
 <p class="sub">Press <code>Ctrl+Alt+Space</code>, speak, press again. The text
 lands in the field you were already typing in. The provider's window never
 appears on your desktop.</p>
+</header>
 
-<h2>How it works</h2>
-<ol class="plain">
-<li>A hotkey starts the provider's own dictation — not a model on your machine.</li>
-<li>The provider runs on a private display: never focused, never shown.</li>
-<li>The transcript is typed into the window that had focus, or handed back to
-you if delivery is uncertain.</li>
-</ol>
+<div class="oy-story">
+  <section data-design-section="bento" aria-labelledby="how-title">
+    <header class="oy-section-head">
+      <h2 id="how-title" class="oy-title">From voice to text.</h2>
+      <p>Three steps, right where you’re typing.</p>
+    </header>
+    <div class="oy-grid">
+      <article class="oy-tile oy-tile--stage">
+        <picture class="oy-stage-art" data-design-visual>
+          <source media="(max-width: 740px)" srcset="./assets/voice-wave-small.webp">
+          <img src="./assets/voice-wave.webp" width="1280" height="853" alt="">
+        </picture>
+        <div class="oy-tile-copy">
+          <span class="oy-keys"><kbd>Ctrl</kbd><kbd>Alt</kbd><kbd>Space</kbd></span>
+          <h3>Speak, then press again.</h3>
+          <p>The shortcut starts and stops dictation.</p>
+        </div>
+      </article>
+      <article class="oy-tile oy-tile--diagram">
+        <div class="oy-tile-copy">
+          <h3>Your window stays put.</h3>
+          <p>The provider recognizes speech on a private display.</p>
+        </div>
+        <img class="oy-diagram" data-design-visual src="./assets/private-display.svg" width="360" height="120" alt="">
+      </article>
+      <article class="oy-tile oy-tile--diagram oy-tile--cursor">
+        <div class="oy-tile-copy">
+          <h3>Text at your cursor.</h3>
+          <p>If delivery is uncertain, OyVoice returns the transcript for manual recovery.</p>
+        </div>
+        <img class="oy-diagram" data-design-visual src="./assets/cursor.svg" width="360" height="120" alt="">
+      </article>
+    </div>
+  </section>
 
-<h2>What you don't pay for</h2>
-<p>No GPU. No API key. No subscription to us. The speech recognition is the
-provider's own free dictation; OyVoice owns the bridge.</p>
+  <section class="oy-editorial" data-design-section="editorial" aria-labelledby="requirements-title">
+    <h2 id="requirements-title" class="oy-title">Before you try it.</h2>
+    <dl class="oy-facts">
+      <div><dt>System</dt><dd>Pop!_OS 24.04 COSMIC on Wayland, x86_64. Google Chrome installed from a .deb package.</dd></div>
+      <div><dt>Release</dt><dd>Tester build. Physical acceptance is still open. Google speech is experimental.</dd></div>
+      <div><dt>Privacy</dt><dd>Audio goes to your chosen cloud provider. OyVoice keeps a bounded local transcript history you can delete.</dd></div>
+    </dl>
+  </section>
 
-<h2>Limits — read this first</h2>
-<div class="limits"><ul>
-<li>Pop!_OS 24.04 COSMIC only. Wayland, x86_64, Google Chrome installed from
-<code>.deb</code>. Nothing else is supported today.</li>
-<li>The Google speech provider is experimental. Real-speech quality in RU/EN is
-not yet qualified by physical testing.</li>
-<li>The build is not production-qualified: physical acceptance gates are still
-open.</li>
-<li>Audio goes to the selected cloud provider. Read the privacy notice before
-dictating anything private.</li>
-<li>Paste into apps with unknown focus is refused by design; an uncertain
-delivery is reported, not replayed.</li>
-</ul></div>
+  <section class="oy-action" data-design-section="action" aria-labelledby="status-title">
+    <div class="oy-action-copy">
+      <h2 id="status-title" class="oy-title" data-design-heading>Sales aren’t open.</h2>
+      <p>OyVoice is a free tester release.</p>
+      <a class="oy-button" data-design-primary href="https://github.com/oysana/oyvoice/issues">
+        View GitHub Issues
+        <svg aria-hidden="true" viewBox="0 0 20 20" fill="none"><path d="M5 15 14 6M6 6h8v8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="oy-action-art" data-design-visual aria-hidden="true"><canvas width="512" height="256"></canvas></div>
+  </section>
 
-<h2>What this is not</h2>
-<p>Not a local model. Not a meeting transcriber. Not macOS or Windows. Not a
-service that stores your audio on our side.</p>
-
-<h2>Early access — sales are not open yet</h2>
-<p>The launch offer will be <strong>$1</strong>: the current
-<code>.deb</code> build, a license key, and a direct line to the author. This
-page will carry the checkout link when sales open — there is nothing to pay
-for today.</p>
-
-<h2>FAQ</h2>
-<p><strong>Do I need a GPU or an OpenAI key?</strong><br>
-No. Recognition happens in the provider's own web dictation, which you sign in
-to once.</p>
-<p><strong>Which systems work?</strong><br>
-Pop!_OS 24.04 with COSMIC on Wayland, x86_64, Chrome installed from
-<code>.deb</code>. We say no to everything else rather than half-support it.</p>
-<p><strong>Is my audio private?</strong><br>
-Your audio goes to the cloud provider you choose. OyVoice keeps a bounded
-local transcript history that you can delete. The privacy notice describes
-exactly what is stored.</p>
-<p><strong>What happens if the text doesn't arrive?</strong><br>
-OyVoice reports an uncertain delivery and leaves the transcript for manual
-recovery. It never silently replays.</p>
-<p><strong>Will it cost anything?</strong><br>
-An early-access offer is planned at $1 — the packaged build, a license key,
-and a direct line to the author. Sales are not open yet.</p>
-<p><strong>Can I refund?</strong><br>
-Refund terms will be set by the checkout platform once sales open; the
-author will handle requests personally.</p>
-
-<footer>
-OyVoice · contact: <a href="https://github.com/oysana/oyvoice/issues">GitHub
-Issues</a>
-</footer>
+  <section class="oy-faq" data-design-section="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="oy-title">Common questions.</h2>
+    <div class="oy-faq-list">
+      <details><summary>Do I need a GPU or an API key?</summary><p>No. The selected cloud provider recognizes the speech. The ChatGPT provider needs sign-in.</p></details>
+      <details><summary>What happens if OyVoice can’t verify focus?</summary><p>OyVoice refuses to insert into an unknown field. If delivery is uncertain, it reports it and leaves the transcript for manual recovery.</p></details>
+      <details><summary>Has Google speech been tested with real speech?</summary><p>Google speech is experimental. Physical testing of live speech in Russian and English is still open.</p></details>
+    </div>
+  </section>
+  <footer class="oy-footer" role="contentinfo">
+    <span>OyVoice</span>
+    <a href="./ru/" hreflang="ru" lang="ru" aria-label="View this page in Russian">Русский</a>
+  </footer>
+</div>
+</main>
 </body>
 </html>
