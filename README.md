@@ -25,3 +25,13 @@ Use native links and headings inside sections. The light-wave illustration
 has two WebP sizes. The diagrams are inline-independent SVG files. The
 availability panel draws its shader on entry and resize. Its CSS background
 works without WebGL or JavaScript.
+
+Use Kargul's spacing, grid, and image hierarchy for OyVoice. Keep the
+storefront's own typography and pixel controls. `--font-display` pairs
+Geist Pixel Square with Geist Mono for Cyrillic. `--font-body` uses Inter
+for explanatory copy. Both roles load their fonts from `assets/fonts/`.
+
+The [Geist v1.9.2](https://github.com/vercel/geist-font/tree/v1.9.2)
+webfonts and the Latin/Cyrillic subset of
+[Inter v4.1](https://github.com/rsms/inter/tree/v4.1) ship with their
+SIL Open Font License files.

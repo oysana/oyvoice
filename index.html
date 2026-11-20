@@ -20,8 +20,8 @@
 }
 </script>
 <style>
-  body{font-family:system-ui,sans-serif;max-width:640px;margin:2rem auto;
-       padding:0 1.2rem;line-height:1.6;color:#141414}
+  body{font-family:system-ui,sans-serif;margin:0;line-height:1.6;color:#141414}
+  .oy-hero{max-width:640px;margin:2rem auto;padding:0 1.2rem}
   h1{font-size:1.9rem;line-height:1.25;margin-bottom:.4rem}
   .sub{font-size:1.1rem;color:#333}
   code{background:#f1f1f1;padding:.1rem .35rem;border-radius:4px}
@@ -31,10 +31,12 @@
 </head>
 <body>
 <main>
+<header class="oy-hero">
 <h1>OyVoice — dictation for Pop!_OS COSMIC</h1>
 <p class="sub">Press <code>Ctrl+Alt+Space</code>, speak, press again. The text
 lands in the field you were already typing in. The provider's window never
 appears on your desktop.</p>
+</header>
 
 <div class="oy-story">
   <section data-design-section="bento" aria-labelledby="how-title">

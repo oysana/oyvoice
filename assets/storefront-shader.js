@@ -30,10 +30,10 @@ function renderStage(canvas) {
       float rings = pow(.5 + .5 * cos(d * 88.0 + 4.0 * sin(p.y * 5.0)), 4.0);
       float glow = exp(-d * 5.2);
       float grain = fract(sin(dot(gl_FragCoord.xy, vec2(13.31, 51.73))) * 673.18) - .5;
-      vec3 ink = vec3(.075, .145, .117);
-      vec3 green = vec3(.33, .62, .43);
-      vec3 light = vec3(.72, .85, .51);
-      vec3 color = ink + green * glow * .82 + light * rings * glow * .62;
+      vec3 ink = vec3(.044, .051, .071);
+      vec3 blue = vec3(.14, .31, .66);
+      vec3 light = vec3(.42, .55, .92);
+      vec3 color = ink + blue * glow * .82 + light * rings * glow * .62;
       gl_FragColor = vec4(color + grain * .025, 1.0);
     }
   `);

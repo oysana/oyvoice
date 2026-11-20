@@ -133,6 +133,18 @@ def check_css():
     for name in ("tile-corner", "grid-gap", "tile-inset", "divider", "accent-action", "focus", "control-feedback"):
         if name not in {token[2:] for token in tokens} or f"var(--{name})" not in css:
             return [f"assets/storefront.css: missing or unused role token --{name}"]
+    fonts = {
+        "display": '"Geist Pixel", "Geist Mono"',
+        "body": "Inter",
+    }
+    for role, family in fonts.items():
+        if f"--font-{role}: {family}," not in css or f"var(--font-{role})" not in css:
+            return [f"assets/storefront.css: use {family} for --font-{role}"]
+    for name in ("GeistPixel-Square", "GeistMono-Regular", "InterVariable-Latin-Cyrillic"):
+        relative = f"fonts/{name}.woff2"
+        file = ROOT / "assets" / relative
+        if f'url("{relative}")' not in css or not file.is_file():
+            return [f"assets/storefront.css: load local {relative}"]
     return []
 
 
