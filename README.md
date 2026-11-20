@@ -1,8 +1,8 @@
 # OyVoice
 
-Public storefront for OyVoice — a dictation bridge for Pop!_OS 24.04 COSMIC.
+OyVoice is a dictation bridge for Pop!_OS 24.04 COSMIC. The storefront is
+available in [English](https://oysana.github.io/oyvoice/) and
+[Russian](https://oysana.github.io/oyvoice/ru/). Sales are closed.
 
-Site: https://oysana.github.io/oyvoice/
-
-Sales are not open yet; this repository currently hosts only the static
-landing (EN + RU). Contact: GitHub Issues.
+To preview locally, run `python3 -m http.server --bind 127.0.0.1 8000`
+and open `http://127.0.0.1:8000/`. Contact us via GitHub Issues.
